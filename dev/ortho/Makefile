@@ -1,4 +1,5 @@
-all: uig-MULTI.automorf.hfst uig-CYR.automorf.bin uig-CYR.autogen.hfst uig-LAT.automorf.hfst uig-LAT.autogen.hfst uig-MULTI.automorf.bin
+# all: uig-MULTI.automorf.hfst uig-CYR.automorf.bin uig-CYR.autogen.hfst uig-LAT.automorf.hfst uig-LAT.autogen.hfst uig-MULTI.automorf.bin
+all: uig-LAT.automorf.hfst
 
 # all: ara-cyr-test.hfst ara-lat-test.hfst cyr-ara-test.hfst lat-ara-test.hfst
 
@@ -14,14 +15,14 @@ all: uig-MULTI.automorf.hfst uig-CYR.automorf.bin uig-CYR.autogen.hfst uig-LAT.a
 %.hfst: %.twol.hfst %.lexc.hfst
 	hfst-compose-intersect -1 $(word 2,$^) -2 $< -o $@
 
-uig-CYR.autogen.hfst: ../../.deps/uig.LR.hfst ara-cyr.hfst
-	hfst-minimise $< | hfst-compose-intersect -1 - -2 $(word 2,$^) -o $@
+# uig-CYR.autogen.hfst: ../../.deps/uig.LR.hfst ara-cyr.hfst
+# 	hfst-minimise $< | hfst-compose-intersect -1 - -2 $(word 2,$^) -o $@
 
-uig-CYR.REVautomorf.hfst: ../../.deps/uig.LR.hfst ara-cyr.hfst
-	hfst-minimise $< | hfst-compose-intersect -1 - -2 $(word 2,$^) -o $@
+# uig-CYR.REVautomorf.hfst: ../../.deps/uig.LR.hfst ara-cyr.hfst
+# 	hfst-minimise $< | hfst-compose-intersect -1 - -2 $(word 2,$^) -o $@
 
-uig-CYR.automorf.hfst: uig-CYR.REVautomorf.hfst
-	hfst-invert $< -o $@
+# uig-CYR.automorf.hfst: uig-CYR.REVautomorf.hfst
+# 	hfst-invert $< -o $@ 
 
 # This works fine as an hfst using hfst-proc, but I get "Error: Invalid dictionary (hint: the left side of an entry is empty)"
 # if I run it as a .bin using lt-proc.
@@ -35,7 +36,7 @@ uig-LAT.REVautomorf.hfst: ../../.deps/uig.LR.hfst ara-lat.hfst
 	hfst-minimise $< | hfst-compose-intersect -1 - -2 $(word 2,$^) -o $@
 
 uig-LAT.automorf.hfst: uig-LAT.REVautomorf.hfst
-	hfst-invert $< -o $@
+	hfst-invert $<  | hfst-fst2fst -o $@ -O
 
 # This works fine as an hfst using hfst-proc, but it finds no analyses for any vowel-initial word when run as a .bin
 # e..g, 'adem' won't return an analysis.

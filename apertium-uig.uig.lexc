@@ -46,7 +46,8 @@ Multichar_Symbols
 %<nom%>           ! Nominative
 %<abl%>           ! Ablative
 %<dat%>           ! Dative
-%<loc%>           ! Locative
+%<loc-f%>           ! Locative front
+%<loc-b%>           ! Locative back
 %<gen%>           ! Genitive
 %<acc%>           ! Accusative
 %<ter%>           ! Terminative
@@ -153,6 +154,9 @@ Multichar_Symbols
 %{y%}                 ! realised as ي 
 %>                    ! Morpheme boundary
 
+! Harmony Symbols
+%{Af%}
+%{Ab%}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 LEXICON Root
@@ -197,7 +201,8 @@ CLITICS ;
 
 
 LEXICON COMP
-%<comp%>:%>ر%{A%}%{K%} # ; 
+%<comp-f%>:%>ر%{Af%}%{Kf%} # ; 
+%<comp-b%>:%>ر%{Ab%}%{Kb%} # ; 
 
 LEXICON POST-SUFFIX 
 %+سىز%<post%>:%>سىز PP-PERS ;
@@ -209,11 +214,15 @@ LEXICON CASE
 %<nom%>: CLITICS-COP ;
 !%<dat%>:%>%{G%}%{A%} Copula ;
 %<dat%>:%>%{G%}%{A%} CLITICS ;
-%<loc%>:%>%{D%}%{A%} CLITICS-COP ;
+%<loc-f%>:%>%{D%}%{Af%} CLITICS-COP ;
+%<loc-b%>:%>%{D%}%{Ab%} CLITICS-COP ;
 !%<loc%>:%>%{D%}%{A%} Copula ;
-%<loc%>%<attr%>:%>%{D%}%{A%}%>كى CLITICS ;
-%<loc%>%<subst%>:%>%{D%}%{A%}%>كى SUBST-2 ;
-%<loc%>%<subst%>%<pl%>:%>%{D%}%{A%}%>كى%>ل%{A%}ر SUBST-2 ;
+%<loc-f%>%<attr%>:%>%{D%}%{Af%}%>كى CLITICS ;
+%<loc-b%>%<attr%>:%>%{D%}%{Ab%}%>كى CLITICS ;
+%<loc-f%>%<subst%>:%>%{D%}%{Af%}%>كى SUBST-2 ;
+%<loc-b%>%<subst%>:%>%{D%}%{Ab%}%>كى SUBST-2 ;
+%<loc-f%>%<subst%>%<pl%>:%>%{D%}%{Af%}%>كى%>ل%{A%}ر SUBST-2 ;
+%<loc-b%>%<subst%>%<pl%>:%>%{D%}%{Ab%}%>كى%>ل%{A%}ر SUBST-2 ;
 %<abl%>:%>%{D%}ىن CLITICS-COP ;
 !%<gen%>:%>نىڭ Copula ;
 %<gen%>:%>نىڭ CLITICS ;
@@ -227,8 +236,10 @@ LEXICON CASE-2
 
 %<nom%>: CLITICS ;
 %<dat%>:%>%{G%}%{A%} CLITICS ;
-%<loc%>:%>%{D%}%{A%} CLITICS ;
-%<loc%>%<attr%>:%>%{D%}%{A%}%>كى CLITICS ;
+%<loc-b%>:%>%{D%}%{Ab%} CLITICS ;
+%<loc-f%>:%>%{D%}%{Af%} CLITICS ;
+%<loc-b%>%<attr%>:%>%{D%}%{Ab%}%>كى CLITICS ;
+%<loc-f%>%<attr%>:%>%{D%}%{Af%}%>كى CLITICS ;
 %<abl%>:%>%{D%}ىن CLITICS ;
 %<gen%>:%>نىڭ CLITICS ;
 %<acc%>:%>نى CLITICS ;
@@ -323,7 +334,7 @@ LEXICON PRON-DEM-CASE-PL
 %<nom%>: CLITICS ;
 %<acc%>:نى CLITICS ;
 %<gen%>:نىڭ CLITICS ;
-%<loc%>:دا CLITICS ;
+%<loc-b%>:دا CLITICS ;
 %<abl%>:دىن CLITICS ;
 %<dat%>:غا CLITICS ;
 
@@ -332,8 +343,8 @@ LEXICON PRON-DEM-CASE
 %<nom%>: CLITICS ;
 %<acc%>:نى CLITICS ;
 %<gen%>:نىڭ CLITICS ;
-%<loc%>:ندا CLITICS ;
-%<loc%>:نىڭدا CLITICS ;
+%<loc-b%>:ندا CLITICS ;
+%<loc-b%>:نىڭدا CLITICS ;
 %<abl%>:ندىن CLITICS ;
 %<abl%>:نىڭدىن CLITICS ;
 %<dat%>:ڭا CLITICS ;
@@ -346,7 +357,7 @@ LEXICON PRON-PERS-AN
 %<acc%>:ىنى CLITICS ; ! Dir/LR
 %<gen%>:ىنىڭ CLITICS ; ! Dir/LR
 %<abl%>:ەندىن CLITICS ;
-%<loc%>:ەندە CLITICS ;
+%<loc-f%>:ەندە CLITICS ;
 %<abl%>:ېنىڭدىن CLITICS ;
 
 
@@ -377,21 +388,21 @@ LEXICON PRON-PERS-U
 %<prn%>%<pers%>%<p3%>%<sg%>%<nom%>: CLITICS ; 
 %<prn%>%<pers%>%<p3%>%<sg%>%<acc%>:نى CLITICS ; 
 %<prn%>%<pers%>%<p3%>%<sg%>%<gen%>:نىڭ CLITICS ; 
-%<prn%>%<pers%>%<p3%>%<sg%>%<loc%>:نىڭدا CLITICS ; ! 
+%<prn%>%<pers%>%<p3%>%<sg%>%<loc-b%>:نىڭدا CLITICS ; ! 
 %<prn%>%<pers%>%<p3%>%<sg%>%<abl%>:دىن CLITICS ; 
 %<prn%>%<pers%>%<p3%>%<sg%>%<dat%>:نىڭغا CLITICS ;
 
 LEXICON PRON-PERS-U2
 
 %<prn%>%<pers%>%<p3%>%<sg%>%<gen%>:نىڭ CLITICS ; 
-%<prn%>%<pers%>%<p3%>%<sg%>%<loc%>:ندا CLITICS ; ! 
+%<prn%>%<pers%>%<p3%>%<sg%>%<loc-b%>:ندا CLITICS ; ! 
 %<prn%>%<pers%>%<p3%>%<sg%>%<abl%>:ندىن CLITICS ; 
 %<prn%>%<pers%>%<p3%>%<sg%>%<dat%>:ڭا CLITICS ;
 
 LEXICON PRON-PERS-U3
 
 %<prn%>%<pers%>%<p3%>%<sg%>%<gen%>:نىڭ CLITICS ;  
-%<prn%>%<pers%>%<p3%>%<sg%>%<loc%>:دا CLITICS ; ! 
+%<prn%>%<pers%>%<p3%>%<sg%>%<loc-b%>:دا CLITICS ; ! 
 %<prn%>%<pers%>%<p3%>%<sg%>%<abl%>:دىن CLITICS ; 
 %<prn%>%<pers%>%<p3%>%<sg%>%<dat%>:غا CLITICS ;
 

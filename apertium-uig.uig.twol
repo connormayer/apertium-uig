@@ -6,8 +6,8 @@ Alphabet
 %{ğ%}:0
 %{q%}:0
 %{G%}:غ
-%{K%}:ق
-%{A%}:ا
+!%{K%}:ق
+!%{A%}:ا
 %{E%}:ا
 %{D%}:د
 %{i%}:0
@@ -64,14 +64,28 @@ Rules
 
 !! Vowel harmony
 
-"{A} becomes ە in front vowel contexts"
-%{A%}:ە <=> [ :FrontVow [ :ى | :Cns ]* :Cns ]/[ :0 - Abstract: ] _ ;
-               [ %{e%}: [ :ى | :Cns ]* :Cns ]/[ :0 - Abstract: ] _ ;
-                                                      %{e%}: %>: _ ;
-       except
+"A front"
+%{Af%}:ە <=> _ ;
+    except
+        :Vow/:0 _ ;
+        _ %>: :Cns [ :0 - %{☫%}: ]* :Vow ;
+         _ :Cns %>: [ :0 - %{☫%}: ]* :Vow ;
+
+"A back"
+%{Ab%}:ا <=> _ ;
+    except
+        :Vow/:0 _ ;
+        _ %>: :Cns [ :0 - %{☫%}: ]* :Vow ;
+        _ :Cns %>: [ :0 - %{☫%}: ]* :Vow ;
+
+!"{A} becomes ە in front vowel contexts"
+!%{A%}:ە <=> [ :FrontVow [ :ى | :Cns ]* :Cns ]/[ :0 - Abstract: ] _ ;
+!               [ %{e%}: [ :ى | :Cns ]* :Cns ]/[ :0 - Abstract: ] _ ;
+!                                                      %{e%}: %>: _ ;
+!       except
 !          _ [ :Cns :Vow ]/:0 ;
-          _ %>: :Cns [ :0 - %{☫%}: ]* :Vow ;
-          _ :Cns %>: [ :0 - %{☫%}: ]* :Vow ;
+!          _ %>: :Cns [ :0 - %{☫%}: ]* :Vow ;
+!          _ :Cns %>: [ :0 - %{☫%}: ]* :Vow ;
 
 "{E} becomes ە in front vowel contexts"
 %{E%}:ە <=> [ :FrontVow [ :ى | :Cns ]* :Cns ]/[ :0 - Abstract: ] _ ;
@@ -89,8 +103,14 @@ Rules
 "{E} becomes ي after vowels"
 %{E%}:ي <=> :Vow/:0 _ ;
 
-"{A} deletes after vowels"
-%{A%}:0 <=> :Vow/:0 _ ;
+!"{A} deletes after vowels"
+!%{A%}:0 <=> :Vow/:0 _ ;
+
+"{Af} deletes after vowels"
+%{Af%}:0 <=> :Vow/:0 _ ;
+
+"{Ab} deletes after vowels"
+%{Ab%}:0 <=> :Vow/:0 _ ;
 
 "{i} epenthesis"
 %{i%}:ى <=> :Cns (:0) %>: _ ;
@@ -151,10 +171,15 @@ Rules
 
 !! Cons-vowel interaction
 
-"{K} to ك after front vowel"
-%{K%}:ك <=> :FrontVow/:0 _ ;
-:FrontVow (:Cns) %>: :Cns :ى _ ;
+!"{K} to ك after front vowel"
+!%{K%}:ك <=> :FrontVow/:0 _ ;
+!:FrontVow (:Cns) %>: :Cns :ى _ ;
 
+"{Kf}"
+%{Kf%}:ك <=> _ ;
+
+"{Kb}"
+%{Kb%}:ق <=> _ ;
 
 "{G} to گ after front vowel"
 %{G%}:گ <=> [ :FrontVow (:VoicedCns) ]/[ :0 - Abstract: ] _ ;
@@ -189,7 +214,7 @@ Vx:ى <=> _ %>: :Cns [ :0 - %{☫%}: ]* :Vow ;
      where Vx in ( ا ە ) ;
 
 "{A} becomes reduced vowel in non-initial and non-final open syllables"
-%{A%}:ى <=> _ %>: :Cns [ :0 - %{☫%}: ]* :Vow ;
+[ %{Af%}:ى | %{Ab%}:ى ] <=> _ %>: :Cns [ :0 - %{☫%}: ]* :Vow ;
             _ :Cns %>: [ :0 - %{☫%}: ]* :Vow ;
      except
          ! except in initial syllables
