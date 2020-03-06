@@ -1,5 +1,5 @@
 # all: uig-MULTI.automorf.hfst uig-CYR.automorf.bin uig-CYR.autogen.hfst uig-LAT.automorf.hfst uig-LAT.autogen.hfst uig-MULTI.automorf.bin
-all: uig-LAT.automorf.hfst
+all: uig-LAT.automorf.hfst lat-ara-test.hfst
 
 # all: ara-cyr-test.hfst ara-lat-test.hfst cyr-ara-test.hfst lat-ara-test.hfst
 
