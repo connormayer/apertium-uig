@@ -552,6 +552,7 @@ LEXICON PRON-REFL-INFL
 LEXICON PRON-REFL
 
 %<prn%>%<ref%>: PRON-REFL-INFL ;
+%<prn%>%<ref%>: # ;
 
 
 LEXICON PRON-DEM-COMMON
@@ -851,7 +852,7 @@ LEXICON V-ABIL-NEG-POS
 
 LEXICON V-ABIL
 
-%<abil-f%>:%>%{A%}ل V-ABIL-NEG-POS ; 
+%<abil%>:%>%{A%}ل V-ABIL-NEG-POS ; 
 %<abil-f%>:%>%{Af%}ل V-ABIL-NEG-POS ; 
 %<abil-b%>:%>%{Ab%}ل V-ABIL-NEG-POS ; 
 
@@ -941,14 +942,14 @@ LEXICON V-FUT
 %<fut-f%>:%>%م%{Af%}%{Kf%}چى V-COP-PERS ;
 %<fut-b%>:%>%م%{Ab%}%{Kb%}چى V-COP-PERS ;
 !%<fut%>%<dub%>:%>%{E%}%>دى%{G%}%{A%}ن V-COP-PERS ; 
-%<fut-f%>%<dub%>:%>%{Ef%}%>دى%{Gf%}%{Af%}ن V-COP-PERS ; 
-%<fut-b%>%<dub%>:%>%{Eb%}%>دى%{Gb%}%{Ab%}ن V-COP-PERS ; 
-%<fut-f%>%<dub%>:%>%{Ef%}%>دى%{Gf%}%{A%}ن V-COP-PERS ; 
-%<fut-b%>%<dub%>:%>%{Eb%}%>دى%{Gb%}%{A%}ن V-COP-PERS ; 
-%<fut-f%>%<dub%>:%>%{E%}%>دى%{Gf%}%{Af%}ن V-COP-PERS ; 
-%<fut-b%>%<dub%>:%>%{E%}%>دى%{Gb%}%{Ab%}ن V-COP-PERS ; 
-%<fut-f%>%<dub%>:%>%{E%}%>دى%{Gf%}%{A%}ن V-COP-PERS ; 
-%<fut-b%>%<dub%>:%>%{E%}%>دى%{Gb%}%{A%}ن V-COP-PERS ; 
+!%<fut-f%>%<dub%>:%>%{Ef%}%>دى%{Gf%}%{Af%}ن V-COP-PERS ; 
+!%<fut-b%>%<dub%>:%>%{Eb%}%>دى%{Gb%}%{Ab%}ن V-COP-PERS ; 
+!%<fut-f%>%<dub%>:%>%{Ef%}%>دى%{Gf%}%{A%}ن V-COP-PERS ; 
+!%<fut-b%>%<dub%>:%>%{Eb%}%>دى%{Gb%}%{A%}ن V-COP-PERS ; 
+!%<fut-f%>%<dub%>:%>%{E%}%>دى%{Gf%}%{Af%}ن V-COP-PERS ; 
+!%<fut-b%>%<dub%>:%>%{E%}%>دى%{Gb%}%{Ab%}ن V-COP-PERS ; 
+!%<fut-f%>%<dub%>:%>%{E%}%>دى%{Gf%}%{A%}ن V-COP-PERS ; 
+!%<fut-b%>%<dub%>:%>%{E%}%>دى%{Gb%}%{A%}ن V-COP-PERS ; 
 
 LEXICON V-PROG-PERS
 %<p1%>%<sg%>:مەن CLITICS ;
@@ -1256,6 +1257,7 @@ LEXICON Pronouns
 ماۋۇ:ماۋۇ PRON-DEM-U ; 
 ئاۋۇ:ئاۋۇ PRON-DEM-U ; 
 مۇشۇ:مۇشۇ PRON-DEM-U ; 
+موشۇ:موشۇ PRON-DEM-U ; ! Kazakh Uyghur variant
 ئاشۇ:ئاشۇ PRON-DEM-U ; 
 ئەشۇ:ئەشۇ PRON-DEM-U ; 
 
@@ -2559,6 +2561,8 @@ LEXICON Nouns
 
 شىنجاڭ:شىنجاڭ NP-TOP ; ! "Xinjiang"
 ئافغانىستان:ئافغانىستان NP-TOP ; ! "Afghanistan"
+نازارباېۋ:نازارباېۋ NP-TOP ; ! "Nazarbayev"
+
 
 LEXICON Verbs 
 
@@ -10508,7 +10512,7 @@ LEXICON Check
 ۋىڭ:ۋىڭ N1 ; ! ""
 پاسىبان:پاسىبان N1 ; ! ""
 ۋاسكېتبولچى:ۋاسكېتبولچى N1 ; ! ""
-‎كونسېرۋاتور:كونسېرۋاتور N1 ; !
+كونسېرۋاتور:كونسېرۋاتور N1 ; !
 ئۈلپەتچىلىك:ئۈلپەتچىلىك N1 ; ! ""
 جىگەرپارە:جىگەرپارە N1 ; ! ""
 چەللە:چەللە N1 ; ! ""
@@ -15106,6 +15110,7 @@ LEXICON Check
 ترانسپورت:ترانسپورت N1 ; ! ""
 ماماتلىق:ماماتلىق N1 ; ! ""
 قازاقىستان:قازاقىستان N1 ; ! ""
+قازاقستان:قازاقستان N1 ; ! ""
 ۋاپۇرۇش:ۋاپۇرۇش N1 ; ! ""
 زەھەرخەندىلىك:زەھەرخەندىلىك N1 ; ! ""
 چالغۇ:چالغۇ N1 ; ! ""
@@ -21800,6 +21805,7 @@ LEXICON Check
 روزا:روزا N1 ; ! ""
 بانكا:بانكا N1 ; ! ""
 بانكا:بانكا N1 ; ! ""
+بانك:بانك N1 ; ! ""
 ئىملا:ئىملا%{☫%} N1 ; ! ""
 تىبەت:تىبەت N1 ; ! ""
 نەپرەت:نەپرەت N1 ; ! ""
@@ -21859,6 +21865,7 @@ LEXICON Check
 ئۇھ:ئۇھ INTERJ ; ! ""
 ھوي:ھوي INTERJ ; ! ""
 مەزكۇر:مەزكۇر DET-DEM ; ! ""
+مەزكۈر:مەزكۈر DET-DEM ; ! Kazakh Uyghur variant?
 ئەيسا:ئەيسا%{☫%} NP-ANT-M ; ! ""
 ئەيسا:ئەيسا NP-ANT-M ; ! ""
 تىبەت:تىبەت NP-TOP ; ! ""
@@ -22125,6 +22132,7 @@ LEXICON Check
 يىللىق:يىللىق A1 ; !
 قانداق:قانداق A1 ; !
 مەزكۇر:مەزكۇر A1 ; !
+مەزكۈر:مەزكۈر A1 ; ! Kazakh Uyghur variant?
 ھەر:ھەر A1 ; !
 زور:زور A1 ; !
 بۈگۈن:بۈگۈن N1 ; !
@@ -26262,6 +26270,7 @@ EX360:EX360 N1 ; !
 ئوسمان:ئوسمان NP-ANT-M ; !
 ئابچ:ئابچ NP-ORG ; !
 خەلقارا:خەلقارا A1 ; !
+خەلىقارا:خەلىقارا A1 ; ! Kazakh Uyghur variant
 قىسقىغىنا:قىسقىغىنا A1 ; !
 دولقۇنلۇق:دولقۇنلۇق A1 ; !
 ئىستىداتلىق:ئىستىداتلىق A1 ; !
@@ -26972,9 +26981,6 @@ EX360:EX360 N1 ; !
 لوگو:لوگو N1 ; ! "logo"
 ئوسۇرۇق:ئوسۇرۇق N1 ;! "fart"
 ئوسۇر:ئوسۇر V-IV ; !
-
-
-
 
 
 
