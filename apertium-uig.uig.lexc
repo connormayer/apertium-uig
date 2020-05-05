@@ -275,9 +275,11 @@ LEXICON CASE
 !%<dat%>:%>%{G%}%{A%} CLITICS ;
 
 %<dat-f%>:%>%{Gf%}%{Af%} CLITICS ;
+%<dat-f%>:%>%{G%}%{Af%} CLITICS ;
 %<dat-b%>:%>%{Gb%}%{Ab%} CLITICS ;
 %<dat-f%>:%>%{Gf%}%{A%} CLITICS ;
 %<dat-b%>:%>%{Gb%}%{A%} CLITICS ;
+%<dat%>:%>%{G%}%{A%} CLITICS ;
 
 %<loc-f%>:%>%{D%}%{Af%} CLITICS-COP ;
 %<loc-b%>:%>%{D%}%{Ab%} CLITICS-COP ;
@@ -307,7 +309,7 @@ LEXICON CASE
 %<gen%>%<subst%>%<pl%>:%>نىڭكى%>ل%{A%}ر SUBST-2 ;
 !%<acc%>:%>نى # ;
 %<acc%>:%>نى CLITICS ;
-!%<ter%>:%>%{G%}ىچە CLITICS ;
+%<ter%>:%>%{G%}ىچە CLITICS ;
 %<ter-f%>:%>%{Gf%}ىچە CLITICS ;
 %<ter-b%>:%>%{Gb%}ىچە CLITICS ;
 
@@ -329,6 +331,7 @@ LEXICON CASE-2
 %<abl%>:%>%{D%}ىن CLITICS ;
 %<gen%>:%>نىڭ CLITICS ;
 %<acc%>:%>نى CLITICS ;
+%<ter%>:%>%{G%}ىچە CLITICS ;
 %<ter-f%>:%>%{Gf%}ىچە CLITICS ;
 %<ter-b%>:%>%{Gb%}ىچە CLITICS ;
 
@@ -355,7 +358,7 @@ CASE ;
 %<px2pl%>%<frm%>:%>%{i%}ڭ%{I%}ز CASE ; ! Dir/LR
 %<px2pl%>%<frm%>:%>%{U%}ڭ%{I%}ز CASE ; 
 %<px2pl-f%>%<frm%>:%>%{Uf%}ڭ%{I%}ز CASE ; 
-%<px2pl-b%>%<frm%>:%>%{Uf%}ڭ%{I%}ز CASE ; 
+%<px2pl-b%>%<frm%>:%>%{Ub%}ڭ%{I%}ز CASE ; 
 !%<px3sg%>%<frm%>:%>‫لىرى‬ CASE ;
 %<px3pl%>:%>لىرى CASE ;
 
@@ -722,12 +725,16 @@ LEXICON PP-PERS
 
 LEXICON V-PAST
 
+%<past%>:%>%{G%}%{A%}ن V-COP-PERS ;
 %<past-b%>:%>%{Gb%}%{Ab%}ن V-COP-PERS ;
 %<past-f%>:%>%{Gf%}%{Af%}ن V-COP-PERS ;
+%<past-f%>:%>%{G%}%{Af%}ن V-COP-PERS ;
 %<past-b%>:%>%{Gb%}%{A%}ن V-COP-PERS ;
 %<past-f%>:%>%{Gf%}%{A%}ن V-COP-PERS ;
 %<past-b%>%<evid%>:%>%{Gb%}%{Ab%}نىكەن V-COP-PERS ;
+%<past%>%<evid%>:%>%{G%}%{A%}نىكەن V-COP-PERS ;
 %<past-f%>%<evid%>:%>%{Gf%}%{Af%}نىكەن V-COP-PERS ;
+%<past-f%>%<evid%>:%>%{G%}%{Af%}نىكەن V-COP-PERS ;
 %<past-b%>%<evid%>:%>%{Gb%}%{A%}نىكەن V-COP-PERS ;
 %<past-f%>%<evid%>:%>%{Gf%}%{A%}نىكەن V-COP-PERS ;
 
@@ -735,10 +742,14 @@ LEXICON V-PAST
 %<ifi-f%>%<evid%>:%>%{Uf%}پ V-PAST-PERS ;
 %<ifi-b%>%<evid%>:%>%{Ub%}پ V-PAST-PERS ;
 
+%<past3%>:%>%{G%}%{A%}نىد V-IFI-PERS ;       ! FIXME: pluperfect
 %<past3-f%>:%>%{Gf%}%{Af%}نىد V-IFI-PERS ;       ! FIXME: pluperfect
+%<past3-f%>:%>%{G%}%{Af%}نىد V-IFI-PERS ;       ! FIXME: pluperfect
 %<past3-b%>:%>%{Gb%}%{Ab%}نىد V-IFI-PERS ;       ! FIXME: pluperfect
 %<past3-f%>:%>%{Gf%}%{A%}نىد V-IFI-PERS ;       ! FIXME: pluperfect
 %<past3-b%>:%>%{Gb%}%{A%}نىد V-IFI-PERS ;       ! FIXME: pluperfect
+
+%<past3%>:%>%{G%}ەنىد V-IFI-PERS ; !Dir/LR
 %<past3-f%>:%>%{Gf%}ەنىد V-IFI-PERS ; !Dir/LR
 %<past3-b%>:%>%{Gb%}ەنىد V-IFI-PERS ; !Dir/LR
 %<past4%>:%>%{U%}پ%>تىكەن V-COP-PERS ;       ! FIXME: pluperfect evidential?
@@ -757,15 +768,13 @@ LEXICON V-PRC
 %<gna_perf-b%>:%>%{Ub%}پلا CLITICS ; ! Dir/LR
 
 LEXICON V-GER
+%<gpr_rsub%>:%>%{G%}%{A%}ن  N-COMMON ; !
 %<gpr_rsub-f%>:%>%{Gf%}%{Af%}ن  N-COMMON ; !
+%<gpr_rsub-f%>:%>%{G%}%{Af%}ن  N-COMMON ; !
 %<gpr_rsub-b%>:%>%{Gb%}%{Ab%}ن  N-COMMON ; !  
 %<gpr_rsub-f%>:%>%{Gf%}%{A%}ن  N-COMMON ; !
 %<gpr_rsub-b%>:%>%{Gb%}%{A%}ن  N-COMMON ; !  
 !%<gpr_rsub3%>:%>%{U%}ۋات%{G%}{A%}ن N-COMMON ; !
-%<gpr_rsub3-f%>:%>%{Uf%}ۋات%{Gf%}{Af%}ن N-COMMON ; !
-%<gpr_rsub3-b%>:%>%{Ub%}ۋات%{Gb%}{Ab%}ن N-COMMON ; !
-%<gpr_rsub3-f%>:%>%{Uf%}ۋات%{Gf%}{A%}ن N-COMMON ; !
-%<gpr_rsub3-b%>:%>%{Ub%}ۋات%{Gb%}{A%}ن N-COMMON ; !
 %<gpr_rsub3-f%>:%>%{Uf%}ۋات%{Gf%}{Af%}ن N-COMMON ; !
 %<gpr_rsub3-b%>:%>%{Ub%}ۋات%{Gb%}{Ab%}ن N-COMMON ; !
 %<gpr_rsub3-f%>:%>%{Uf%}ۋات%{Gf%}{A%}ن N-COMMON ; !
@@ -780,9 +789,11 @@ LEXICON V-GER
 %<gpr_rsub4-b%>:%>%{Gb%}%{üb%}چى N-COMMON ; !
 
 %<ger_past-f%>:%>%{Gf%}%{Af%}ن%>لى%{Kf%} N-COMMON ; !
+%<ger_past-f%>:%>%{G%}%{Af%}ن%>لى%{Kf%} N-COMMON ; !
 %<ger_past-b%>:%>%{Gf%}%{Ab%}ن%>لى%{Kf%} N-COMMON ; !
 %<ger_past-f%>:%>%{Gf%}%{A%}ن%>لى%{Kf%} N-COMMON ; !
 %<ger_past-b%>:%>%{Gf%}%{A%}ن%>لى%{Kf%} N-COMMON ; !
+
 !%<ger_past2%>:%>%{U%}ۋات%>%{G%}%{A%}ن%>لى%{K%} N-COMMON ; ! 
 %<ger_past2-f%>:%>%{U%}ۋات%>%{Gf%}%{Af%}ن%>لى%{Kf%} N-COMMON ; ! 
 %<ger_past2-b%>:%>%{U%}ۋات%>%{Gb%}%{Ab%}ن%>لى%{Kb%} N-COMMON ; ! 
@@ -797,10 +808,17 @@ LEXICON V-GER
 %<ger_pabs-b%>:%>%{Gb%}%{Ab%}ن N-COMMON ; ! 
 %<ger_pabs-f%>:%>%{Gf%}%{A%}ن N-COMMON ; ! 
 %<ger_pabs-b%>:%>%{Gb%}%{A%}ن N-COMMON ; ! 
+%<ger_pabs-f%>:%>%{G%}%{Af%}ن N-COMMON ; ! 
+%<ger_pabs-b%>:%>%{G%}%{Ab%}ن N-COMMON ; ! 
+%<ger_pabs%>:%>%{G%}%{A%}ن N-COMMON ; ! 
+
 %<gpr_rsub-f%>%<subst%>:%>%{Gf%}%{Af%}ن N-COMMON ;
+%<gpr_rsub-f%>%<subst%>:%>%{G%}%{Af%}ن N-COMMON ;
 %<gpr_rsub-b%>%<subst%>:%>%{Gb%}%{Ab%}ن N-COMMON ;
 %<gpr_rsub-f%>%<subst%>:%>%{Gf%}%{A%}ن N-COMMON ;
 %<gpr_rsub-b%>%<subst%>:%>%{Gb%}%{A%}ن N-COMMON ;
+%<gpr_rsub%>%<subst%>:%>%{G%}%{A%}ن N-COMMON ;
+
 %<gpr_fut%>:%>%{E%}%>دىغان SUBST-2 ;
 %<gpr_fut-f%>:%>%{Ef%}%>دىغان SUBST-2 ;
 %<gpr_fut-b%>:%>%{Eb%}%>دىغان SUBST-2 ;
@@ -965,16 +983,25 @@ LEXICON IMP-PERS
 %<p1-f%>%<sg%>:%>%{Af%}ي CLITICS ;
 %<p1-b%>%<sg%>:%>%{Ab%}ي CLITICS ;
 %<p2%>%<sg%>: CLITICS ;
+
 %<p2-b%>%<sg-b%>:%{Gb%}%{A%}يسەن CLITICS ; ! Dir/LR
 %<p2-f%>%<sg-f%>:%{Gf%}%{A%}يسەن CLITICS ; ! Dir/LR
 %<p2-b%>%<sg-b%>:%{Gb%}%{Ab%}يسەن CLITICS ; ! Dir/LR
 %<p2-f%>%<sg-f%>:%{Gf%}%{Af%}يسەن CLITICS ; ! Dir/LR
+%<p2-f%>%<sg-f%>:%{G%}%{Af%}يسەن CLITICS ; ! Dir/LR
+%<p2%>%<sg%>:%{G%}%{A%}يسەن CLITICS ; ! Dir/LR
+
+%<p2%>%<sg%>:%>%{G%}ىن CLITICS ; ! Dir/LR
 %<p2-f%>%<sg-f%>:%>%{Gf%}ىن CLITICS ; ! Dir/LR
 %<p2-b%>%<sg-b%>:%>%{Gb%}ىن CLITICS ; ! Dir/LR
+
+%<p2%>%<sg%>:%>%{G%}%{A%}يلا CLITICS ; ! Dir/LR
+%<p2-f%>%<sg-f%>:%>%{G%}%{Af%}يلا CLITICS ; ! Dir/LR
 %<p2-f%>%<sg-f%>:%>%{Gf%}%{A%}يلا CLITICS ; ! Dir/LR
 %<p2-b%>%<sg-b%>:%>%{Gb%}%{A%}يلا CLITICS ; ! Dir/LR
 %<p2-f%>%<sg-f%>:%>%{Gf%}%{Af%}يلا CLITICS ; ! Dir/LR
 %<p2-b%>%<sg-b%>:%>%{Gb%}%{Ab%}يلا CLITICS ; ! Dir/LR
+
 %<p2%>%<sg%>%<frm%>:%>%{U%}ڭ CLITICS ; ! 
 %<p2-f%>%<sg%>%<frm%>:%>%{Uf%}ڭ CLITICS ; ! 
 %<p2-b%>%<sg%>%<frm%>:%>%{Ub%}ڭ CLITICS ; ! 
@@ -1024,7 +1051,9 @@ LEXICON V-WHEN
 %<gna_when-f%>:%>%{Gf%}%{A%}چ # ;
 %<gna_when-b%>:%>%{Gb%}%{A%}چ # ;
 %<gna_when-f%>:%>%{Gf%}%{Af%}چ # ;
+%<gna_when-f%>:%>%{G%}%{Af%}چ # ;
 %<gna_when-b%>:%>%{Gb%}%{Ab%}چ # ;
+%<gna_when-f%>:%>%{G%}%{A%}چ # ;
 
 %<gna_when2-f%>:%>%{Gf%}%{A%}ند%{A%} # ; 
 %<gna_when2-b%>:%>%{Gb%}%{A%}ند%{A%} # ; 
@@ -1034,6 +1063,10 @@ LEXICON V-WHEN
 %<gna_when2-b%>:%>%{Gb%}%{A%}ند%{Ab%} # ; 
 %<gna_when2-f%>:%>%{Gf%}%{Af%}ند%{Af%} # ; 
 %<gna_when2-b%>:%>%{Gb%}%{Ab%}ند%{Ab%} # ; 
+%<gna_when2-f%>:%>%{G%}%{Af%}ند%{Af%} # ; 
+%<gna_when2-f%>:%>%{G%}%{A%}ند%{Af%} # ; 
+%<gna_when2-f%>:%>%{G%}%{Af%}ند%{A%} # ; 
+%<gna_when2%>:%>%{G%}%{A%}ند%{A%} # ; 
 
 LEXICON V-NEG-COMMON
 
@@ -26981,6 +27014,8 @@ EX360:EX360 N1 ; !
 لوگو:لوگو N1 ; ! "logo"
 ئوسۇرۇق:ئوسۇرۇق N1 ;! "fart"
 ئوسۇر:ئوسۇر V-IV ; !
+ئورۇنباسار:ئورۇنباسار N1 ;
+دۇنىيا:دۇنىيا%{☫%} N1 ; ! "world"
 
 
 

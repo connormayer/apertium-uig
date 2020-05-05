@@ -5,7 +5,7 @@ Alphabet
 
 %{ğ%}:0
 %{q%}:0
-%{G%}:غ
+!%{G%}:0
 %{Gf%}:گ
 %{Gb%}:غ
 %{K%}:ق
@@ -208,8 +208,8 @@ Rules
 %{ğ%}: %>: _ ;
 :ق ( %>: ) _ ;
 
-"{Gf} to ق after ق"
-%{Gf%}:ق <=> :ق ( %>: ) _ ;
+"{G} to ق after ق"
+%{G%}:ق <=> :ق ( %>: ) _ ;
 
 "{Gb} to ق after voiceless consonant"
 %{Gb%}:ق <=> :VoicelessCns ( %>: ) _ ;
